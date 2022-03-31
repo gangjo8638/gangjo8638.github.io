@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charser="utf-8"%>
+<%@ page contentType="text/html; charset="utf-8"%>
 <html>
   <head><title>Request인스턴스 표현</title>
   </head>
