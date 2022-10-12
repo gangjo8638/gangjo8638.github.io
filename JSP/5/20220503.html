@@ -1,0 +1,178 @@
+<!doctype  html>  <!--  20220503.html -->             
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <style>   [class*="col-"] { float:left; padding:10px;} /* for mobile */
+  [class*="col-"] {  width: 100%; }
+  @media only screen and (min-width: 768px) {        /* For desktop: */
+    .col-1{ width:8.33%;} .col-2{width:16.66%;} .col-3{width:25%;} .col-4{ width:33.33%;} 
+    .col-5{width:41.66%;} .col-6{width:50%;} .col-7{ width:58.33%;} .col-8{width:66.66%;} 
+    .col-9{width:75%;} .col-10{ width:83.33%;} .col-11{width:91.66%;} .col-12{width:100%;}}  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <title>박강조 JSP</title></head>
+<body><header></header><section>
+  <h4>박강조</h4>
+  
+  <p>5주 2회 userResponse.jsp 소스코드</p>
+  <picture>
+    <source media="(min-width: 768px)" srcset="https://gangjo8638.github.io/JSP/5/hw5_3_userResponsejsp_source.png"/>
+    <img src="https://gangjo8638.github.io/JSP/5/hw5_3_userResponsejsp_source.png" alt="소스코드" style="width:auto;"/>
+  </picture>
+  <p>5주 2회 userResponse.jsp 결과화면</p>
+  <picture>
+    <source media="(min-width: 768px)" srcset="https://gangjo8638.github.io/JSP/5/hw5_3_userResponsejsp_result.png"/>
+    <img src="https://gangjo8638.github.io/JSP/5/hw5_3_userResponsejsp_result.png" alt="결과화면" style="width:auto;"/>
+  </picture>
+  
+  <p>5주 2회 resRedirectA.jsp 소스코드</p>
+  <picture>
+    <source media="(min-width: 768px)" srcset="https://gangjo8638.github.io/JSP/5/hw5_3_resRedirectAjsp_source.png"/>
+    <img src="https://gangjo8638.github.io/JSP/5/hw5_3_resRedirectAjsp_source.png" alt="소스코드" style="width:auto;"/>
+  </picture>
+  <p>5주 2회 resRedirectB.jsp 소스코드</p>
+  <picture>
+    <source media="(min-width: 768px)" srcset="https://gangjo8638.github.io/JSP/5/hw5_3_resRedirectBjsp_source.png"/>
+    <img src="https://gangjo8638.github.io/JSP/5/hw5_3_resRedirectBjsp_source.png" alt="소스코드" style="width:auto;"/>
+  </picture>
+  <p>5주 2회 resRedirectB.jsp 결과화면</p>
+  <picture>
+    <source media="(min-width: 768px)" srcset="https://gangjo8638.github.io/JSP/5/hw5_3_resRedirectBjsp_result.png"/>
+    <img src="https://gangjo8638.github.io/JSP/5/hw5_3_resRedirectBjsp_result.png" alt="결과화면" style="width:auto;"/>
+  </picture>
+  
+  <p>5주 2회 userOut.jsp 소스코드</p>
+  <picture>
+    <source media="(min-width: 768px)" srcset="https://gangjo8638.github.io/JSP/5/hw5_3_userOutjsp_source.png"/>
+    <img src="https://gangjo8638.github.io/JSP/5/hw5_3_userOutjsp_source.png" alt="소스코드" style="width:auto;"/>
+  </picture>
+  <p>5주 2회 userOut.jsp  결과화면</p>
+  <picture>
+    <source media="(min-width: 768px)" srcset="https://gangjo8638.github.io/JSP/5/hw5_3_userOutjsp_result.png"/>
+    <img src="https://gangjo8638.github.io/JSP/5/hw5_3_userOutjsp_result.png" alt="결과화면" style="width:auto;"/>
+  </picture>
+  
+  <p>5주 2회 slogin.html 소스코드</p>
+  <picture>
+    <source media="(min-width: 768px)" srcset="https://gangjo8638.github.io/JSP/5/hw5_3_sloginhtml_source.png"/>
+    <img src="https://gangjo8638.github.io/JSP/5/hw5_3_sloginhtml_source.png" alt="소스코드" style="width:auto;"/>
+  </picture>
+  <p>5주 2회 slogin.html  결과화면</p>
+  <picture>
+    <source media="(min-width: 768px)" srcset="https://gangjo8638.github.io/JSP/5/hw5_3_sloginhtml_result.png"/>
+    <img src="https://gangjo8638.github.io/JSP/5/hw5_3_sloginhtml_result.png" alt="결과화면" style="width:auto;"/>
+  </picture>
+  
+  <p>5주 2회 slogin2.jsp 소스코드</p>
+  <picture>
+    <source media="(min-width: 768px)" srcset="https://gangjo8638.github.io/JSP/5/hw5_3_slogin2jsp_source.png"/>
+    <img src="https://gangjo8638.github.io/JSP/5/hw5_3_slogin2jsp_source.png" alt="소스코드" style="width:auto;"/>
+  </picture>
+  <p>5주 2회 slogin2.jsp  결과화면</p>
+  <picture>
+    <source media="(min-width: 768px)" srcset="https://gangjo8638.github.io/JSP/5/hw5_3_slogin2jsp_result.png"/>
+    <img src="https://gangjo8638.github.io/JSP/5/hw5_3_slogin2jsp_result.png" alt="결과화면" style="width:auto;"/>
+  </picture>
+  
+  <p>5주 2회 suser1.jsp 소스코드</p>
+  <picture>
+    <source media="(min-width: 768px)" srcset="https://gangjo8638.github.io/JSP/5/hw5_3_suser1jsp_source.png"/>
+    <img src="https://gangjo8638.github.io/JSP/5/hw5_3_suser1jsp_source.png" alt="소스코드" style="width:auto;"/>
+  </picture>
+  <p>5주 2회 suser1.jsp  결과화면</p>
+  <picture>
+    <source media="(min-width: 768px)" srcset="https://gangjo8638.github.io/JSP/5/hw5_3_suser1jsp_result.png"/>
+    <img src="https://gangjo8638.github.io/JSP/5/hw5_3_suser1jsp_result.png" alt="결과화면" style="width:auto;"/>
+  </picture>
+  
+  <p>5주 2회 suser2.jsp 소스코드</p>
+  <picture>
+    <source media="(min-width: 768px)" srcset="https://gangjo8638.github.io/JSP/5/hw5_3_suser2jsp_source.png"/>
+    <img src="https://gangjo8638.github.io/JSP/5/hw5_3_suser2jsp_source.png" alt="소스코드" style="width:auto;"/>
+  </picture>
+  <p>5주 2회 suser2.jsp  결과화면</p>
+  <picture>
+    <source media="(min-width: 768px)" srcset="https://gangjo8638.github.io/JSP/5/hw5_3_suser2jsp_result.png"/>
+    <img src="https://gangjo8638.github.io/JSP/5/hw5_3_suser2jsp_result.png" alt="결과화면" style="width:auto;"/>
+  </picture>
+  
+  <p>5주 2회 slogout.jsp 소스코드</p>
+  <picture>
+    <source media="(min-width: 768px)" srcset="https://gangjo8638.github.io/JSP/5/hw5_3_slogoutjsp_source.png"/>
+    <img src="https://gangjo8638.github.io/JSP/5/hw5_3_slogoutjsp_source.png" alt="소스코드" style="width:auto;"/>
+  </picture>
+  <p>5주 2회 slogout.jsp  결과화면</p>
+  <picture>
+    <source media="(min-width: 768px)" srcset="https://gangjo8638.github.io/JSP/5/hw5_3_slogoutjsp_result.png"/>
+    <img src="https://gangjo8638.github.io/JSP/5/hw5_3_slogoutjsp_result.png" alt="결과화면" style="width:auto;"/>
+  </picture>
+  
+  <p>5주 2회 homework.css 소스코드</p>
+  <picture>
+    <source media="(min-width: 768px)" srcset="https://gangjo8638.github.io/JSP/5/hw5_3(과제)_homeworkcss_source.png"/>
+    <img src="https://gangjo8638.github.io/JSP/5/hw5_3(과제)_homeworkcss_source.png" alt="소스코드" style="width:auto;"/>
+  </picture>
+  
+  <p>5주 2회 index.html 소스코드</p>
+  <picture>
+    <source media="(min-width: 768px)" srcset="https://gangjo8638.github.io/JSP/5/hw5_3(과제)_indexhtml_source.png"/>
+    <img src="https://gangjo8638.github.io/JSP/5/hw5_3(과제)_indexhtml_source.png" alt="소스코드" style="width:auto;"/>
+  </picture>
+  <p>5주 2회  index.html  결과화면</p>
+  <picture>
+    <source media="(min-width: 768px)" srcset="https://gangjo8638.github.io/JSP/5/hw5_3(과제)_indexhtml_result.png"/>
+    <img src="https://gangjo8638.github.io/JSP/5/hw5_3(과제)_indexhtml_result.png" alt="결과화면" style="width:auto;"/>
+  </picture>
+  
+  <p>5주 2회 login.html 소스코드</p>
+  <picture>
+    <source media="(min-width: 768px)" srcset="https://gangjo8638.github.io/JSP/5/hw5_3(과제)_loginhtml_source.png"/>
+    <img src="https://gangjo8638.github.io/JSP/5/hw5_3(과제)_loginhtml_source.png" alt="소스코드" style="width:auto;"/>
+  </picture>
+  <p>5주 2회  login.html  결과화면</p>
+  <picture>
+    <source media="(min-width: 768px)" srcset="https://gangjo8638.github.io/JSP/5/hw5_3(과제)_loginhtml_result.png"/>
+    <img src="https://gangjo8638.github.io/JSP/5/hw5_3(과제)_loginhtml_result.png" alt="결과화면" style="width:auto;"/>
+  </picture>
+  
+  <p>5주 2회 login(1).jsp 소스코드</p>
+  <picture>
+    <source media="(min-width: 768px)" srcset="https://gangjo8638.github.io/JSP/5/hw5_3(과제)_loginjsp_source.png"/>
+    <img src="https://gangjo8638.github.io/JSP/5/hw5_3(과제)_loginjsp_source.png" alt="소스코드" style="width:auto;"/>
+  </picture>
+  <p>5주 2회 login(2).jsp 소스코드</p>
+  <picture>
+    <source media="(min-width: 768px)" srcset="https://gangjo8638.github.io/JSP/5/hw5_3(과제)_loginjsp(2)_source.png"/>
+    <img src="https://gangjo8638.github.io/JSP/5/hw5_3(과제)_loginjsp(2)_source.png" alt="소스코드" style="width:auto;"/>
+  </picture>
+  <p>5주 2회  login.jsp  결과화면</p>
+  <picture>
+    <source media="(min-width: 768px)" srcset="https://gangjo8638.github.io/JSP/5/hw5_3(과제)_loginjsp_result.png"/>
+    <img src="https://gangjo8638.github.io/JSP/5/hw5_3(과제)_loginjsp_result.png" alt="결과화면" style="width:auto;"/>
+  </picture>
+  
+  <p>5주 2회 search.jsp(1) 소스코드</p>
+  <picture>
+    <source media="(min-width: 768px)" srcset="https://gangjo8638.github.io/JSP/5/hw5_3(과제)_searchjsp(1)_source.png"/>
+    <img src="https://gangjo8638.github.io/JSP/5/hw5_3(과제)_searchjsp(1)_source.png" alt="소스코드" style="width:auto;"/>
+  </picture>
+  <p>5주 2회 search.jsp(2) 소스코드</p>
+  <picture>
+    <source media="(min-width: 768px)" srcset="https://gangjo8638.github.io/JSP/5/hw5_3(과제)_searchjsp(2)_source.png"/>
+    <img src="https://gangjo8638.github.io/JSP/5/hw5_3(과제)_searchjsp(2)_source.png" alt="소스코드" style="width:auto;"/>
+  </picture>
+  <p>5주 2회  search.jsp  결과화면</p>
+  <picture>
+    <source media="(min-width: 768px)" srcset="https://gangjo8638.github.io/JSP/5/hw5_3(과제)_searchjsp_result.png"/>
+    <img src="https://gangjo8638.github.io/JSP/5/hw5_3(과제)_searchjsp_result.png" alt="결과화면" style="width:auto;"/>
+  </picture>
+  
+  <p>5주 2회 logout.jsp 소스코드</p>
+  <picture>
+    <source media="(min-width: 768px)" srcset="https://gangjo8638.github.io/JSP/5/hw5_3(과제)_logoutjsp_source.png"/>
+    <img src="https://gangjo8638.github.io/JSP/5/hw5_3(과제)_logoutjsp_source.png" alt="소스코드" style="width:auto;"/>
+  </picture>
+  <p>5주 2회  logout.jsp  결과화면</p>
+  <picture>
+    <source media="(min-width: 768px)" srcset="https://gangjo8638.github.io/JSP/5/hw5_3(과제)_logoutjsp_result.png"/>
+    <img src="https://gangjo8638.github.io/JSP/5/hw5_3(과제)_logoutjsp_result.png" alt="결과화면" style="width:auto;"/>
+  </picture>
+  
+</section></body></html>
