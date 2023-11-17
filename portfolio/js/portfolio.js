@@ -20,6 +20,16 @@ function typing(){
 setInterval(typing, 140) //속도 조절
 
 
+/*메뉴바*/
+const toggleBtn = document.querySelector('#nav_a');
+const menu = document.querySelector('#gnb');
+
+toggleBtn.addEventListener('click', () => {
+    menu.classList.toggle('active');
+});
+
+
+
 
 //마우스
 let mouseCursor = document.querySelector(".cursor");
