@@ -110,3 +110,62 @@ function clickdot2(n) {
     "img2/port" + n + ".png"
 );
 }
+
+
+
+
+//3번째
+
+var ii3 = 1;
+var getimgno3 = document.getElementById("boximg3");
+function clickrigh3() {
+if (ii3 < 5) {
+    ii3++;
+    getimgno3.setAttribute(
+    "src",
+    "img2/ufc" +
+    ii3 +
+        ".png"
+    );
+    
+    console.log(ii3);
+} else if ((ii3 = 5)) {
+    ii3 = 1;
+    getimgno3.setAttribute(
+    "src",
+    "img2/ufc" +
+    ii3 +
+        ".png"
+    );
+    console.log(ii3);
+}
+}
+function clickleft3() {
+if (ii3 > 0) {
+    ii3--;
+    getimgno3.setAttribute(
+    "src",
+    "img2/ufc" +
+    ii3 +
+        ".png"
+    );
+    
+    console.log(ii3);
+} else if ((ii3 = 1)) {
+    ii3 = 5;
+    getimgno3.setAttribute(
+    "src",
+    "img2/ufc" +
+    ii3 +
+        ".png"
+    );
+    console.log(ii3);
+} 
+
+}
+function clickdot3(n) {
+    getimgno3.setAttribute(
+    "src",
+    "img2/ufc" + n + ".png"
+);
+}
