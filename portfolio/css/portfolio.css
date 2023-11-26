@@ -1017,6 +1017,17 @@
         box-shadow: 5px 5px 5px gray;
     
     }
+    #boximg3{
+        position: relative;
+        width: 350px; height: 300px;
+        top: 130px;
+        left: -280px;
+        object-fit: cover;
+        border-radius: 5px;
+        border: 3px solid gray;
+        box-shadow: 5px 5px 5px gray;
+    
+    }
     
     
     
@@ -1925,7 +1936,17 @@
         box-shadow: 5px 5px 5px gray;
     
     }
+    #boximg3{
+        position: relative;
+        width: 150px; height: 150px;
+        top: 70px;
+        left: -50px;
+        object-fit: cover;
+        border-radius: 5px;
+        border: 3px solid gray;
+        box-shadow: 5px 5px 5px gray;
     
+    }
     
     
      #teaching2{
