@@ -169,3 +169,60 @@ function clickdot3(n) {
     "img2/ufc" + n + ".png"
 );
 }
+
+
+//4번째
+
+var ii4 = 1;
+var getimgno4 = document.getElementById("boximg4");
+function clickrigh4() {
+if (ii4 < 5) {
+    ii4++;
+    getimgno4.setAttribute(
+    "src",
+    "img2/game" +
+    ii4 +
+        ".png"
+    );
+    
+    console.log(ii4);
+} else if ((ii4 = 5)) {
+    ii4 = 1;
+    getimgno4.setAttribute(
+    "src",
+    "img2/game" +
+    ii4 +
+        ".png"
+    );
+    console.log(ii4);
+}
+}
+function clickleft4() {
+if (ii4 > 0) {
+    ii4--;
+    getimgno4.setAttribute(
+    "src",
+    "img2/game" +
+    ii4 +
+        ".png"
+    );
+    
+    console.log(ii4);
+} else if ((ii4 = 1)) {
+    ii4 = 5;
+    getimgno4.setAttribute(
+    "src",
+    "img2/game" +
+    ii4 +
+        ".png"
+    );
+    console.log(ii4);
+} 
+
+}
+function clickdot4(n) {
+    getimgno4.setAttribute(
+    "src",
+    "img2/game" + n + ".png"
+);
+}
