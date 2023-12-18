@@ -982,6 +982,7 @@
     
     #project .inner5 .projectdiv #teaching{
         position: absolute;
+        width: 500px;
         right: 120px;
         top: 140px;
         line-height: 30px;
@@ -1044,7 +1045,8 @@
     
      #teaching2{
         position: absolute;
-        right: 220px;
+        width: 500px;
+        right: 120px;
         top: 140px;
         line-height: 30px;
         font-size: 18px;
@@ -1053,7 +1055,7 @@
      #teaching2 #more{
         position: absolute;
         bottom: 0px;
-        right: -100px;
+        right: 0px;
         color: white;
         padding: 10px 15px;
         background-color: rgb(33, 33, 33);
@@ -1973,6 +1975,7 @@
     
      #teaching2{
         position: absolute;
+        
         right: 70px;
         top: 290px;
         line-height: 14px;
