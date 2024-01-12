@@ -20,6 +20,9 @@ function typing(){
 setInterval(typing, 140) //속도 조절
 
 
+
+
+
 /*메뉴바*/
 const toggleBtn = document.querySelector('#nav_a');
 const menu = document.querySelector('#gnb');
@@ -27,6 +30,9 @@ const menu = document.querySelector('#gnb');
 toggleBtn.addEventListener('click', () => {
     menu.classList.toggle('active');
 });
+
+
+
 
 
 
@@ -45,10 +51,55 @@ let mouseCursor = document.querySelector(".cursor");
 
 
 
+/*
+//parallax animation
+let stars = document.getElementById('stars');
+let moon = document.getElementById('moon');
+let mountains_behind = document.getElementById('mountains_behind');
+let link = document.getElementById('link');
+let mountains_front = document.getElementById('mountains_front');
+
+
+window.addEventListener('scroll', function(){
+  let value = this.window.scrollY;
+
+  // 스크롤 범위를 0에서 500으로 제한
+  if (value >= 0 && value <= 400) {
+    //stars.style.left = value * 0.25 + 'px';
+    moon.style.top = value * 1.05 + 'px';
+    mountains_behind.style.top = value * 0.5 + 'px';
+    mountains_front.style.top = value * 0 + 'px';
+    
+  }
+});
+*/
+
+let stars = document.getElementById('stars');
+let moon = document.getElementById('moon');
+let mountains_behind = document.getElementById('mountains_behind');
+let link = document.getElementById('link');
+let mountains_front = document.getElementById('mountains_front');
+
+window.addEventListener('scroll', function () {
+  let value = this.window.scrollY;
+ 
+  // 스크롤 범위를 0에서 400으로 제한하고, 창의 너비가 768px 이상인 경우에만 실행
+  if (value >= 0 && value <= 400) {
+    
+    moon.style.top = value * 1.05 + 'px';
+    mountains_behind.style.top = value * 0.5 + 'px';
+    mountains_front.style.top = value * 0 + 'px';
+  }
+  if (value >= 0 && value <= 400 && window.innerWidth >= 769){
+    stars.style.left = value * 0.25 + 'px';
+  }
+});
 
 
 
-let mainText = document.querySelector("header .inner2 #link")
+
+
+let mainText = document.querySelector("header #link")
 
 window.addEventListener('scroll', function(){
     let value = this.window.scrollY
