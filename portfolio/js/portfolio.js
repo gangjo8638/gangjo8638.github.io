@@ -17,8 +17,11 @@ function typing(){
       i++;
       }
 }
-setInterval(typing, 140) //속도 조절
-
+/*setInterval(typing, 140) //속도 조절*/
+// Delay initial execution by 0.5 seconds
+setTimeout(() => {
+  setInterval(typing, 110);
+}, 1000);
 
 
 
@@ -109,7 +112,7 @@ window.addEventListener('scroll', function(){
        mainText.style.animation="disappaer 1s ease-out forwards";
     }
     else{
-        mainText.style.animation= `slide 1s ease-out`;
+        mainText.style.animation= `slide 1s ease-out forwards`;
     }
 })
 
