@@ -41,16 +41,46 @@ toggleBtn.addEventListener('click', () => {
 
 
 //마우스
-let mouseCursor = document.querySelector(".cursor");
-  let navLinks = document.querySelectorAll("nav .inner #gnb"); //메뉴 링크
-  //window 객체에 scroll & mouse 이벤트를 추가하고 cursor함수 실행되도록 함
-  window.addEventListener("scroll", cursor);
-  window.addEventListener("mousemove", cursor);
-  //커스텀 커서의 left값과 top값을 커서의 XY좌표값과 일치시킴
-  function cursor(e) {
-    mouseCursor.style.left = e.pageX + "px";
-    mouseCursor.style.top = e.pageY - scrollY + "px";
-}
+document.addEventListener('DOMContentLoaded', function () {
+  // 마우스에 따라 다니는 파란 점 요소
+  var cursor = document.querySelector('.cursor');
+
+  // 모든 페이지 점 요소
+  var dots = document.querySelectorAll('.dot');
+
+  // 마우스 이벤트 리스너
+  document.addEventListener('mousemove', function (event) {
+      // 마우스 위치에 따라 파란 점 이동
+      cursor.style.left = event.clientX + 'px';
+      cursor.style.top = event.clientY + 'px';
+
+      // 현재 마우스 위치
+      var mouseX = event.clientX;
+      var mouseY = event.clientY;
+
+      // 각 페이지 점에 대한 처리
+      var isNearDot = false;
+
+      dots.forEach(function (dot) {
+          var rect = dot.getBoundingClientRect();
+
+          // 페이지 점에 마우스가 다가가면 플래그를 설정
+          if (mouseX >= rect.left && mouseX <= rect.right && mouseY >= rect.top && mouseY <= rect.bottom) {
+              isNearDot = true;
+          }
+      });
+
+      // 페이지 점에 마우스가 다가가면 파란 점 숨김
+      if (isNearDot) {
+          cursor.style.opacity = 0;
+          
+      } else {
+          cursor.style.opacity = 1;
+      }
+  });
+});
+
+
 
 
 
@@ -97,6 +127,32 @@ window.addEventListener('scroll', function () {
     stars.style.left = value * 0.25 + 'px';
   }
 });
+
+
+
+
+//점 표시
+window.addEventListener('scroll', function () {
+  var elements = document.querySelectorAll('section, header, figure, footer');
+  var currentElement = null;
+
+  elements.forEach(function (element) {
+      var rect = element.getBoundingClientRect();
+      if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+          currentElement = element;
+      }
+  });
+
+  var dots = document.querySelectorAll('.dot');
+  dots.forEach(function (dot, index) {
+      if (currentElement && index === Array.from(elements).indexOf(currentElement)) {
+          dot.classList.add('active');
+      } else {
+          dot.classList.remove('active');
+      }
+  });
+});
+
 
 
 
