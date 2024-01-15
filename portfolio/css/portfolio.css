@@ -13,6 +13,165 @@
     font-weight: bold;
 
 }
+
+#pgj2024{
+    position: fixed;
+    top: 210px;
+    left: -170px;
+    transform: rotate(90deg);
+    z-index: 100;
+   
+    font-size: 18px;
+    letter-spacing: 10px; /*글자 자간*/
+    word-spacing: 12px; /*단어 자간*/
+    font-family: 'Noto Sans KR', sans-serif;
+
+}
+#pgj2024 #a_pgj2024{
+    color: #fff;
+}
+
+/*점 표시*/
+#dotContainer {
+    position: fixed;
+    top: 50%;
+    right: 30px;
+    transform: translate(0%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 9999;
+}
+
+.dot{
+    /*
+    width: 10px;
+    height: 10px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    background-color: #ccc;*/ /* 기본 색상 */
+    
+    width: 7px;
+    height: 7px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    background-color: #ccc;
+    transition: transform 0.3s ease-in-out; 
+    border: 1px solid rgb(180, 180, 180);
+    
+}
+.dot:not(.active):hover {
+    transform: scale(2.5); /* 확대 시의 크기, 필요에 따라 조절 가능 */
+}
+.dot.active {
+    
+}
+
+.dot.active:not(:required) {
+    /* hide "loading..." text */
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+  }
+  
+  .dot.active:not(:required):after {
+    content: '';
+    display: block;
+    font-size: 4px; /*크기*/
+    width: 1em;
+    height: 1em;
+    margin-top: -0.5em;
+    -webkit-animation: spinner 1500ms infinite linear;
+    -moz-animation: spinner 1500ms infinite linear;
+    -ms-animation: spinner 1500ms infinite linear;
+    -o-animation: spinner 1500ms infinite linear;
+    animation: spinner 1500ms infinite linear;
+    border-radius: 0.5em;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.5) -1.5em 0 0 0, rgba(0, 0, 0, 0.5) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
+    box-shadow: #ccc 1.5em 0 0 0, #ccc 1.1em 1.1em 0 0, #ccc 0 1.5em 0 0, #ccc -1.1em 1.1em 0 0, #ccc -1.5em 0 0 0, #ccc -1.1em -1.1em 0 0, #ccc 0 -1.5em 0 0, #ccc 1.1em -1.1em 0 0;
+
+    
+  }
+  
+  /* Animation */
+  
+  @-webkit-keyframes spinner {
+    0% {
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @-moz-keyframes spinner {
+    0% {
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @-o-keyframes spinner {
+    0% {
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes spinner {
+    0% {
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}
+/*끝*/
+
 @media screen and (min-width: 769px){
     *{
         margin: 0px;
@@ -38,25 +197,20 @@
     }
     /* 커스텀 커서 스타일 정의해주기 */
     .cursor {
-       
         width: 2rem;
         height: 2rem;
-        
         border-radius: 50%;
         position: fixed;
-        
         transform: translate(-50%, -50%);
         pointer-events: none;
         transition: all 0.3s ease;
-        transition-property: background, transform;
+        transition-property: background, transform, opacity; /* opacity (자연스럽게 사라지는거 추가) */
         transform-origin: 100% 100%;
         backdrop-filter: sepia(20%);
         background-size: cover;
         background-color: rgba(109, 114, 255, 0.4);
         z-index: 5;
-    
-       
-        
+        opacity: 1; /* 초기 투명도 설정 (자연스럽게 사라지는거 추가)*/
     }
     
     
@@ -525,7 +679,7 @@
         left: 0;
         top: 140px;
         width: 100%;
-        height: 430px;
+        height: 390px;
         border: 2px solid rgb(209, 209, 209);
     
         
@@ -545,6 +699,15 @@
         font-weight: bold;
 
     }
+    #profillp::after{
+        position: absolute;
+        content: '';
+        bottom: -3px;
+        left: 0;
+        width: 310px;
+        height: 2px;
+        background: rgba(81, 43, 206, 0.5);
+    }
     figure .inner3 .pfborder #profillp1{
         position: absolute;
         /*
@@ -559,6 +722,15 @@
         font-weight: bold;
 
     }
+    #profillp1::after{
+        position: absolute;
+        content: '';
+        bottom: -3px;
+        left: 0;
+        width: 345px;
+        height: 2px;
+        background: rgba(81, 43, 206, 0.5);
+    }
     figure .inner3 .pfborder #profillp2{
         position: absolute;
         /*
@@ -572,6 +744,15 @@
         color: black;
         font-weight: bold;
 
+    }
+    #profillp2::after{
+        position: absolute;
+        content: '';
+        bottom: -3px;
+        left: 0;
+        width: 345px;
+        height: 2px;
+        background: rgba(81, 43, 206, 0.5);
     }
     figure .inner3 .pfborder #profill_div {
        
@@ -591,7 +772,7 @@
     figure .inner3 .pfborder #profill1{
         position: absolute;
         width: 400px;
-        top: 100px;
+        top: 90px;
         left: 330px;
         font-weight: bold;
 
@@ -611,12 +792,12 @@
         height: 24px;
         position: absolute;
         left: 0px;
-        top: 250px;
+        top: 205px;
         opacity: 0.8;
     }
-    figure .inner3 .pfborder #profill1 li:nth-child(7) span{
+    figure .inner3 .pfborder #profill1 li:nth-child(6) span{
         position: absolute;
-        top: 250px;
+        top: 205px;
         left: 40px;
         color: rgb(84, 84, 84);z-index: 3;
     }
@@ -682,7 +863,7 @@
 
     #svg1{
         position: absolute;
-        right: -125px;
+        right: -150px;
         top: 300px;
         z-index: 2;
     }
@@ -1367,7 +1548,19 @@
         
     }
     
+    #pgj2024{
+        position: fixed;
+        top: 171px;
+        left: -143px;
+        transform: rotate(90deg);
+        z-index: 1100;
+        color: #fff;
+        font-size: 12px;
+        letter-spacing: 10px; /*글자 자간*/
+        word-spacing: 12px; /*단어 자간*/
+        font-family: 'Noto Sans KR', sans-serif;
     
+    }
     /* 커스텀 커서 스타일 정의해주기 */
     .cursor {
        
@@ -1493,12 +1686,12 @@
     .text_box{
         position: relative;
         top: 100px;
-        font-size: 2rem;
+     
         text-align: center;
         color: white;
         opacity: 0.9;
         font-family: 'Noto Sans KR', sans-serif;
-        font-size: 12px;
+        font-size: 10px;
         
     }
       
@@ -1762,19 +1955,19 @@
         color: rgb(84, 84, 84);
     }
     figure .inner3 .pfborder #profill1 li:nth-child(6){
-        margin-bottom: 33px;
+       
     }
     figure .inner3 .pfborder #profill1 li img{
         width: 24px;
         height: 24px;
         position: absolute;
         left: 0px;
-        top: 260px;
+        top: 200px;
         opacity: 0.8;
     }
-    figure .inner3 .pfborder #profill1 li:nth-child(7) span{
+    figure .inner3 .pfborder #profill1 li:nth-child(6) span{
         position: absolute;
-        top: 265px;
+        top: 210px;
         left: 40px;
         color: rgb(84, 84, 84);z-index: 3;
     }
