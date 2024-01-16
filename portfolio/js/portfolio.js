@@ -155,9 +155,52 @@ window.addEventListener('scroll', function () {
 
 
 
+//모달
+document.addEventListener("DOMContentLoaded", function () {
+  var openModalBtns = document.querySelectorAll(".openModalBtn");
+  var closeBtns = document.querySelectorAll(".close");
+  var modals = document.querySelectorAll(".modal");
+
+  openModalBtns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+          var modalId = btn.getAttribute("data-modal-id");
+          var modal = document.getElementById(modalId);
+
+          if (modal) {
+              modal.style.display = "block";
+              document.body.classList.add("modal-open");
+          }
+      });
+  });
+
+  closeBtns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+          var modalId = btn.getAttribute("data-modal-id");
+          var modal = document.getElementById(modalId);
+
+          if (modal) {
+              modal.style.display = "none";
+              document.body.classList.remove("modal-open");
+          }
+      });
+  });
+
+  window.addEventListener("click", function (event) {
+      modals.forEach(function (modal) {
+          if (event.target === modal) {
+              modal.style.display = "none";
+              document.body.classList.remove("modal-open");
+          }
+      });
+  });
+});
 
 
 
+
+
+
+//페이드 인 아웃
 let mainText = document.querySelector("header #link")
 
 window.addEventListener('scroll', function(){
