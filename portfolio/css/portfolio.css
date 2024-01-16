@@ -1,5 +1,75 @@
 @charset 'utf-8';
 
+/*x축 스크롤 막기*/
+body.modal-open {
+    overflow: hidden;
+}
+
+body.modal-open .modal {
+    overflow-y: auto;
+}
+/*모달*/
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* 수정된 부분 */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15vh auto; /* 수정된 부분 */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    height: 70%;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 추가된 부분: 각 모달에 대한 스타일 */
+#modal1 .modal-content {
+    background-color: #e0e0e0;
+}
+
+#modal2 .modal-content {
+    background-color: #e0e0e0;
+}
+
+#modal3 .modal-content {
+    background-color: #e0e0e0;
+
+}
+
+#modal4 .modal-content {
+    background-color: #e0e0e0;
+
+}
+
+#modal5 .modal-content {
+    background-color: #e0e0e0;
+
+}
+
+
+
+/* 필요에 따라 다른 모달에 대한 스타일을 추가하세요 */
+
 
 #Freepik{
     position: absolute;
@@ -1372,23 +1442,80 @@
     #project .inner5 .projectdiv #teaching{
         position: absolute;
         width: 500px;
-        right: 120px;
-        top: 140px;
+        right: 50px;
+        top: 170px;
         line-height: 30px;
         font-size: 18px;
     }
+
+    #project .inner5 .projectdiv #teaching #teaching_p1{
+        width: 100px;
+        height: auto;
+        font-size: 16px;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: bold;
+        color: #2b2b2b;
+        line-height: 40px;
+
+    }
+    #project .inner5 .projectdiv #teaching #teaching_p1::before{
+        position: absolute;
+        content: '';
+        left: 0;
+        top: -14px;
+        width: 430px;
+        height: 1px;
+        background-color: rgb(33, 33, 33);
+    }
+    #project .inner5 .projectdiv #teaching #teaching_p2{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 350px;
+        height: auto;
+        font-size: 16px;
+        font-family: 'Noto Sans KR', sans-serif;
+        
+        color: #5a5a5a;
+        line-height: 40px;
+
+    }
+
     
     #project .inner5 .projectdiv #teaching #more{
         position: absolute;
-        bottom: 0px;
-        right: 0px;
+        bottom: -55px;
+        left: 0px;
         color: white;
-        padding: 10px 15px;
+        padding: 3px 15px;
         background-color: rgb(33, 33, 33);
         border-radius: 4px;
+        font-size: 15px;
+        font-family: 'Noto Sans KR', sans-serif;
+
     }
     #project .inner5 .projectdiv #teaching #more:hover{
-        padding: 10px 15px;
+
+        background-color: white;
+        border-radius: 4px;
+        color: rgb(33, 33, 33);
+        border: 1px solid rgb(33, 33, 33);
+        transition: all 0.3s;
+    }
+    #project .inner5 .projectdiv #teaching .openModalBtn{
+        position: absolute;
+        bottom: -55px;
+        left: 150px;
+        color: white;
+        padding: 6px 30px;
+        background-color: rgb(33, 33, 33);
+        border-radius: 4px;
+        font-size: 15px;
+        font-family: 'Noto Sans KR', sans-serif;
+
+    }
+    #project .inner5 .projectdiv #teaching .openModalBtn:hover{
+
         background-color: white;
         border-radius: 4px;
         color: rgb(33, 33, 33);
@@ -1396,6 +1523,29 @@
         transition: all 0.3s;
     }
     
+    #project .inner5 .projectdiv #teaching #openModalBtn_id2{
+        position: absolute;
+        
+        bottom: -55px;
+        left: 310px;
+        color: white;
+        padding: 6px 40px;
+        background-color: rgb(33, 33, 33);
+        border-radius: 4px;
+        font-size: 15px;
+        font-family: 'Noto Sans KR', sans-serif;
+
+    }
+    #project .inner5 .projectdiv #teaching #openModalBtn_id2:hover{
+
+        background-color: white;
+        border-radius: 4px;
+        color: rgb(33, 33, 33);
+        border: 1px solid rgb(33, 33, 33);
+        transition: all 0.3s;
+    }
+    
+
     #boximg2{
         position: relative;
         width: 350px; height: 300px;
@@ -1430,35 +1580,7 @@
     
     }
     
-    
-    
-     #teaching2{
-        position: absolute;
-        width: 500px;
-        right: 120px;
-        top: 140px;
-        line-height: 30px;
-        font-size: 18px;
-    }
-    
-     #teaching2 #more{
-        position: absolute;
-        bottom: 0px;
-        right: 0px;
-        color: white;
-        padding: 10px 15px;
-        background-color: rgb(33, 33, 33);
-        border-radius: 4px;
-    }
-     #teaching2 #more:hover{
-        padding: 10px 15px;
-        background-color: white;
-        border-radius: 4px;
-        color: rgb(33, 33, 33);
-        border: 1px solid rgb(33, 33, 33);
-        transition: all 0.3s;
-    }
-    
+
     #contact{
         width: 100%;
         background-color: #fff;
@@ -1547,7 +1669,13 @@
         background: linear-gradient(#2b1055, #7597de);
         
     }
-    
+    body.modal-open {
+        overflow: hidden;
+    }
+
+    body.modal-open .modal {
+        overflow-y: auto;
+    }
     #pgj2024{
         position: fixed;
         top: 171px;
@@ -1936,7 +2064,7 @@
         width: 100px;
         height: auto;
         border-radius: 50%;
-        top: 40px;
+        top: 96px;
         left: 10px;
         box-shadow: 5px 5px 5px  gray;
     
@@ -2375,7 +2503,7 @@
     #boximg{
         position: relative;
         width: 150px; height: 150px;
-        top: 100px;
+        top:70px;
         left: -50px;
         object-fit: cover;
         border-radius: 5px;
@@ -2419,23 +2547,73 @@
     
     #project .inner5 .projectdiv #teaching{
         position: absolute;
-        right: 20px;
-        top: 290px;
+        left: 30px;
+        top: 250px;
         line-height: 14px;
         font-size: 9px;
     }
-    
+    #teaching_p2{
+        width: 100px;
+        position: absolute;
+        left: 80px;
+        top: 0px;
+    }
     #project .inner5 .projectdiv #teaching #more{
         position: absolute;
-        bottom: 0px;
-        right: 0px;
+        top: 120px;
+        left: 0px;
         color: white;
-        padding: 10px 15px;
+        padding: 4px 12px;
         background-color: rgb(33, 33, 33);
         border-radius: 4px;
+        font-size: 8px;
     }
     #project .inner5 .projectdiv #teaching #more:hover{
-        padding: 10px 15px;
+       
+        background-color: white;
+        border-radius: 4px;
+        color: rgb(33, 33, 33);
+        border: 1px solid rgb(33, 33, 33);
+        transition: all 0.3s;
+    }
+
+    #project .inner5 .projectdiv #teaching .openModalBtn{
+        position: absolute;
+        top: 120px;
+        left: 70px;
+        width: 70px;
+        height: 22px;
+        color: white;
+        padding: 4px 12px;
+        background-color: rgb(33, 33, 33);
+        border-radius: 4px;
+        font-size: 8px;
+
+    }
+    #project .inner5 .projectdiv #teaching .openModalBtn:hover{
+
+        background-color: white;
+        border-radius: 4px;
+        color: rgb(33, 33, 33);
+        border: 1px solid rgb(33, 33, 33);
+        transition: all 0.3s;
+    }
+    
+    #project .inner5 .projectdiv #teaching #openModalBtn_id2{
+        position: absolute;
+        top: 120px;
+        left: 147px;
+        width: 70px;
+        height: 22px;
+        color: white;
+        padding: 4px 12px;
+        background-color: rgb(33, 33, 33);
+        border-radius: 4px;
+        font-size: 8px;
+
+    }
+    #project .inner5 .projectdiv #teaching #openModalBtn_id2:hover{
+
         background-color: white;
         border-radius: 4px;
         color: rgb(33, 33, 33);
@@ -2478,32 +2656,7 @@
     }
     
     
-     #teaching2{
-        position: absolute;
-        
-        right: 70px;
-        top: 290px;
-        line-height: 14px;
-        font-size: 9px;
-    }
     
-     #teaching2 #more{
-        position: absolute;
-        bottom: 0px;
-        right: -30px;
-        color: white;
-        padding: 10px 15px;
-        background-color: rgb(33, 33, 33);
-        border-radius: 4px;
-    }
-     #teaching2 #more:hover{
-        padding: 10px 15px;
-        background-color: white;
-        border-radius: 4px;
-        color: rgb(33, 33, 33);
-        border: 1px solid rgb(33, 33, 33);
-        transition: all 0.3s;
-    }
     
     #contact{
         width: 100%;
