@@ -20,29 +20,62 @@ body.modal-open .modal {
 }
 
 .modal-content {
+    position: relative;
     background-color: #fefefe;
     margin: 15vh auto; /* 수정된 부분 */
-    padding: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 50px;
     border: 1px solid #888;
     width: 80%;
-    height: 70%;
+    height: auto; 
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.modal-content #title_h1{
+   font-size: 25px;
+   
+}
+.modal-content #title_h1::after{
+    position: absolute;
+    content: '';
+    top: 70px;
+    left: 20px;
+    width: 95%;
+    height: 1px;
+    background-color: #bbbbbb;
+}
+
+.modal-content #Summary{
+    position: relative;
+    top: 30px;
+    font-size: 25px;
+}
+.modal-content #Summary_p{
+    position: relative;
+    top: 30px;
+    font-size: 15px;
 }
 .close {
-    color: #aaa;
-    float: right;
+    position: absolute;
+    top: -50px;
+    right: 20px;
+    color: #ffffff;
+    
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
+    transition: all 0.3s;
 }
 
 .close:hover,
 .close:focus {
-    color: black;
+    color: rgb(110, 110, 110);
     text-decoration: none;
     cursor: pointer;
 }
 
-/* 추가된 부분: 각 모달에 대한 스타일 */
+/* 추가된 부분: 각 모달에 대한 스타일 
 #modal1 .modal-content {
     background-color: #e0e0e0;
 }
@@ -65,7 +98,7 @@ body.modal-open .modal {
     background-color: #e0e0e0;
 
 }
-
+*/
 
 
 /* 필요에 따라 다른 모달에 대한 스타일을 추가하세요 */
@@ -1523,20 +1556,20 @@ body.modal-open .modal {
         transition: all 0.3s;
     }
     
-    #project .inner5 .projectdiv #teaching #openModalBtn_id2{
+    #project .inner5 .projectdiv #teaching #code{
         position: absolute;
         
         bottom: -55px;
         left: 310px;
         color: white;
-        padding: 6px 40px;
+        padding: 3px 38px;
         background-color: rgb(33, 33, 33);
         border-radius: 4px;
         font-size: 15px;
         font-family: 'Noto Sans KR', sans-serif;
 
     }
-    #project .inner5 .projectdiv #teaching #openModalBtn_id2:hover{
+    #project .inner5 .projectdiv #teaching #code:hover{
 
         background-color: white;
         border-radius: 4px;
@@ -2599,7 +2632,7 @@ body.modal-open .modal {
         transition: all 0.3s;
     }
     
-    #project .inner5 .projectdiv #teaching #openModalBtn_id2{
+    #project .inner5 .projectdiv #teaching #code{
         position: absolute;
         top: 120px;
         left: 147px;
@@ -2610,9 +2643,10 @@ body.modal-open .modal {
         background-color: rgb(33, 33, 33);
         border-radius: 4px;
         font-size: 8px;
+        text-align: center;
 
     }
-    #project .inner5 .projectdiv #teaching #openModalBtn_id2:hover{
+    #project .inner5 .projectdiv #teaching #code:hover{
 
         background-color: white;
         border-radius: 4px;
@@ -2655,8 +2689,27 @@ body.modal-open .modal {
     
     }
     
-    
-    
+
+    .modal-content #title_h1 {
+        font-size: 17px;
+    }
+    .modal-content #Summary {
+       
+        font-size: 16px;
+    }
+    .modal-content #title_h1::after {
+        position: absolute;
+        content: '';
+        top: 70px;
+        left: 20px;
+        width: 84%;
+        height: 1px;
+        background-color: #bbbbbb;
+    }
+    .modal-content #Summary_p {
+        
+        font-size: 10px;
+    }
     
     #contact{
         width: 100%;
