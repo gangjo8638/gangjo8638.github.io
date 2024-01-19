@@ -1437,9 +1437,12 @@ body.modal-open .modal {
         border: 3px solid gray;
         box-shadow: 5px 5px 5px gray;
         
-    
+        transition: opacity 0.3s ease-in-out;
+        
     
     }
+   
+    
     #img_btn{
         position: absolute;
         bottom: 200px;
@@ -1470,8 +1473,15 @@ body.modal-open .modal {
         position: relative;
         bottom: 30px;
         left: -80px;
+       
     }
-    
+    .doxs input{
+        background-color: #c2c2c2;
+        transition: all 0.3s;
+    }
+    .doxs input:hover{
+        background-color: black;
+    }
     #project .inner5 .projectdiv #teaching{
         position: absolute;
         width: 500px;
@@ -1540,7 +1550,7 @@ body.modal-open .modal {
         bottom: -55px;
         left: 150px;
         color: white;
-        padding: 6px 30px;
+        padding: 6px 27px;
         background-color: rgb(33, 33, 33);
         border-radius: 4px;
         font-size: 15px;
@@ -1588,7 +1598,7 @@ body.modal-open .modal {
         border-radius: 5px;
         border: 3px solid gray;
         box-shadow: 5px 5px 5px gray;
-    
+        transition: opacity 0.3s ease-in-out;
     }
     #boximg3{
         position: relative;
@@ -1599,7 +1609,7 @@ body.modal-open .modal {
         border-radius: 5px;
         border: 3px solid gray;
         box-shadow: 5px 5px 5px gray;
-    
+        transition: opacity 0.3s ease-in-out;
     }
     #boximg4{
         position: relative;
@@ -1610,7 +1620,7 @@ body.modal-open .modal {
         border-radius: 5px;
         border: 3px solid gray;
         box-shadow: 5px 5px 5px gray;
-    
+        transition: opacity 0.3s ease-in-out;
     }
     
 
@@ -2542,7 +2552,7 @@ body.modal-open .modal {
         border-radius: 5px;
         border: 3px solid gray;
         box-shadow: 5px 5px 5px gray;
-        
+        transition: opacity 0.3s ease-in-out;
     
     
     }
@@ -2574,8 +2584,12 @@ body.modal-open .modal {
     
     .doxs{
         position: relative;
-        bottom: 210px;
+        bottom: 195px;
         left: -60px;
+    }
+    .doxs input{
+        background-color: #c2c2c2;
+        transition: all 0.3s;
     }
     
     #project .inner5 .projectdiv #teaching{
@@ -2664,7 +2678,7 @@ body.modal-open .modal {
         border-radius: 5px;
         border: 3px solid gray;
         box-shadow: 5px 5px 5px gray;
-    
+        transition: opacity 0.3s ease-in-out;
     }
     #boximg3{
         position: relative;
@@ -2675,7 +2689,7 @@ body.modal-open .modal {
         border-radius: 5px;
         border: 3px solid gray;
         box-shadow: 5px 5px 5px gray;
-    
+        transition: opacity 0.3s ease-in-out;
     }
     #boximg4{
         position: relative;
@@ -2686,7 +2700,7 @@ body.modal-open .modal {
         border-radius: 5px;
         border: 3px solid gray;
         box-shadow: 5px 5px 5px gray;
-    
+        transition: opacity 0.3s ease-in-out;
     }
     
 
